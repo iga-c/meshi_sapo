@@ -38,6 +38,9 @@ export const Header: React.FC<HeaderProps> = ({ apiKey, setApiKey }) => {
                         </h3>
                         <p className="text-xs text-gray-400 mb-3">
                             Google Gemini APIキーを入力してください。<br />
+                            <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-gentle-orange hover:underline">
+                                APIキーを取得する
+                            </a><br />
                             ※ブラウザを閉じるとリセットされます（安全設計）。
                         </p>
                         <input
