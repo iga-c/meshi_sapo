@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ apiKey, setApiKey }) => {
     return (
         <header className="flex justify-between items-center py-6 px-4">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-800 tracking-tight">
-                ふわっと<span className="text-gentle-orange">レシピ</span>
+                めし<span className="text-gentle-orange">サポ</span>
             </h1>
 
             <div className="relative">
