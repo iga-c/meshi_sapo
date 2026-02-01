@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { ChefHat, Copy, Check } from 'lucide-react';
 
 interface RecipeCardProps {
@@ -45,7 +46,14 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ content }) => {
                         li: ({ ...props }) => <li className="text-gray-700" {...props} />,
                         strong: ({ ...props }) => <strong className="text-gentle-orange font-bold" {...props} />,
                         p: ({ ...props }) => <p className="mb-4" {...props} />,
+                        table: ({ ...props }) => <div className="overflow-x-auto my-6 rounded-xl border border-orange-100 shadow-sm"><table className="w-full text-left text-sm text-gray-600" {...props} /></div>,
+                        thead: ({ ...props }) => <thead className="bg-orange-50 text-gray-700 font-bold" {...props} />,
+                        tbody: ({ ...props }) => <tbody className="divide-y divide-orange-50 bg-white" {...props} />,
+                        tr: ({ ...props }) => <tr className="hover:bg-orange-50/30 transition-colors" {...props} />,
+                        th: ({ ...props }) => <th className="px-4 py-3 font-semibold text-gray-700" {...props} />,
+                        td: ({ ...props }) => <td className="px-4 py-3" {...props} />,
                     }}
+                    remarkPlugins={[remarkGfm]}
                 >
                     {content}
                 </ReactMarkdown>
